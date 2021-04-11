@@ -1,0 +1,135 @@
+/**, html {
+    margin: 0;
+    padding: 0;
+}
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden; /* This hides the scroll bar completely*/
+}
+
+.board_pic_1 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* fixed=parallax while scroll=normall */
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /*CSS SMOOTH SCROLL PROPERTIES */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.about_section {
+    display: flex;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none; /*takes away the bullets*/
+    width: 100%;
+    justify-content: center; 
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: skyblue;
+}
+
+section {
+    display: flex;
+    flex-direction: column; /* This prevents the default row setting for flex-box and then stacks them. */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0.50;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center; /*snaps the browser from an uneven place to an even place.*/
+}
+
+section h1 {
+    font-size: 4rem;
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+.border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.music_columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.band_recordings {
+   margin: 30px;
+}
+
+.movie_scores {
+    margin: 30px;
+}
+
+.video_games {
+    margin: 30px;
+}
+
+/* SECTION IMAGES */
+
+section#home {
+    background: url('1_current_board_guitars.jpeg') no-repeat center center/cover;
+}
+
+section#services {
+    background: url('2_bass_board.jpeg') no-repeat center center/cover;
+}
+
+section#music {
+    background: url('3_board_lights.jpeg') no-repeat center center/cover;
+}
+
+section#about {
+    background: url('bowery_guitar.jpeg') no-repeat center left/cover;
+}
+
+section#pricing {
+    background: url('4_m5board_resized.jpeg') no-repeat center center/cover;
+}
+
+section#contact {
+    background: url('jump_kitari.jpeg') no-repeat center center/cover;
+}
